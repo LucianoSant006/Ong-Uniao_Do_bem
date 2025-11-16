@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós | ONG União do Bem Campinas</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" ... />
+
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js" defer></script>
+    <script src="index.js" defer></script> 
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="brand">
+            <img src="img/logo-uniao-do-bem.png" alt="Logo ONG União do Bem Campinas" class="logo-nav">
+        </a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="index.html#acoes">Nossas Ações</a>
+            <a href="index.html#eventos">Eventos</a>
+            <a href="sobre.html">Sobre</a> <a href="index.html#parceiros">Parceiros</a>
+        </div>
+        <button class="btn-2" onclick="location.href='index.html#doacao'">
+            <p>Doe Agora</p>
+            <i class="fa-solid fa-hand-holding-heart"></i>
+        </button>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section class="sobre-hero">
+            <div class="hero-headlines">
+                <h1>Nossa Missão</h1>
+                <p class="reveal-type" data-bg-color="#cccccc" data-fg-color="black">
+                    Somos um projeto de ação social focado em espalhar amor e
+                    cultivar um futuro melhor para quem mais precisa em Campinas e região.
+                </p>
+            </div>
+        </section>
+
+        <section class="pets" id="acoes-detalhadas">
+            <div class="pets-headlines">
+                <i class="fa-solid fa-heart"></i>
+                <h1>O Que Fazemos</h1>
+            </div>
+            
+            <div class="acoes-container">
+                <div class="acao-item">
+                    <div class="acao-imagem">
+                        <img src="img/acao-sopa.jpg" alt="Entrega de Sopa">
+                    </div>
+                    <div class="acao-texto">
+                        <h3>Apoio a Pessoas em Vulnerabilidade</h3>
+                        <div class="pet-tags">
+                            <span>Solidariedade</span>
+                            <span>Alimentação</span>
+                            <span>Dignidade</span>
+                        </div>
+                        <p>Regularmente, nossa equipe de voluntários se mobiliza para preparar e distribuir alimentos, como sopas e marmitas, para pessoas em situação de rua e vulnerabilidade no centro de Campinas. Acreditamos que um prato de comida é um ato de dignidade.</p>
+                    </div>
+                </div>
+    
+                <div class="acao-item reverse">
+                    <div class="acao-imagem">
+                        <img src="img/acao-natal.jpg" alt="Ação de Natal">
+                    </div>
+                    <div class="acao-texto">
+                        <h3>Eventos para Crianças</h3>
+                        <div class="pet-tags">
+                            <span>Natal Solidário</span>
+                            <span>Páscoa</span>
+                            <span>Dia das Crianças</span>
+                        </div>
+                        <p>Nossas datas comemorativas são sagradas! Organizamos grandes eventos em comunidades para levar alegria às crianças. No Natal, Páscoa e Dia das Crianças, distribuímos centenas de presentes, saquinhos de doces e promovemos brincadeiras.</p>
+                    </div>
+                </div>
+    
+                <div class="acao-item">
+                    <div class="acao-imagem">
+                        <img src="img/acao-capoeira.jpg" alt="Aula de Capoeira">
+                    </div>
+                    <div class="acao-texto">
+                        <h3>Incentivo à Cultura e Esporte</h3>
+                        <div class="pet-tags">
+                            <span>Aulas Gratuitas</span>
+                            <span>Capoeira</span>
+                            <span>Cultura Afro</span>
+                        </div>
+                        <p>Acreditamos na transformação social através da cultura. Por isso, apoiamos e promovemos projetos como as aulas de capoeira gratuitas do grupo Abaeté, oferecendo uma alternativa de lazer, disciplina e aprendizado para jovens e crianças.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="doacao" id="redes-sociais"> 
+            <div class="doacao-container"> 
+                <i class="fa-solid fa-handshake-angle"></i> 
+                <h1>Faça Parte Dessa Corrente</h1>
+                <p>Nenhuma dessas ações seria possível sem nossos voluntários e doadores. Siga-nos no Instagram para acompanhar nosso trabalho de perto ou faça uma doação!</p>
+                
+                <div class="hero-headlines-buttons">
+                    <a href="https://www.instagram.com/uniaodobemcampinas/" target="_blank" class="btn-3 btn-transparent">
+                        Seguir no Instagram
+                    </a>
+                    <a href="index.html#doacao" class="btn-3">
+                        Quero Doar Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <h2>Links Rápidos</h2>
+                <div class="links-container">
+                    <div class="links">
+                        <a href="/">Home</a>
+                        <a href="sobre.html">Sobre</a>
+                        <a href="index.html#acoes">Nossas Ações</a>
+                    </div>
+                    <div class="links">
+                        <a href="index.html#eventos">Eventos</a>
+                        <a href="index.html#parceiros">Parceiros</a>
+                        <a href="index.html#doacao">Doar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-brand">
+                <h1>ONG <b class="accent">União do Bem</b></h1>
+                <p>Espalhando amor, cultivando um futuro melhor.</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/uniaodobemcampinas/" target="_blank" title="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-doacao" id="footer-doacao">
+                <h2>Ajude a Causa</h2>
+                <p>Sua doação salva vidas. Contribua via PIX!</p>
+                <div class="pix-info">
+                    <i class="fa-solid fa-key"></i>
+                    <p>CNPJ: 57.303.827/0001-91</p>
+                </div>
+                <p>ONG União do Bem Campinas</p>
+            </div>
+        </div>
+        <p class="copyright">All Rights Reserved to <b>ONG União do Bem Campinas</b></p>
+    </footer>
+</body>
+</html>
