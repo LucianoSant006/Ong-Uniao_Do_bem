@@ -241,7 +241,134 @@ nav.sticky {
 .processo-img:hover {
     transform: scale(1.02);
 }
+/* --- CARROSSEL DE ÍCONES --- */
 
+.carousel-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px; /* Espaço para os botões */
+}
+
+.carousel-container {
+    display: flex; /* Força os itens a ficarem lado a lado */
+    gap: 20px;
+    overflow-x: hidden; /* Esconde a barra de rolagem feia */
+    scroll-behavior: auto !important; /* OBRIGATÓRIO: Impede conflito com o JS */
+    white-space: nowrap;
+    padding: 20px 0;
+    cursor: grab; /* Mãozinha para indicar que pode parar */
+}
+/* --- CSS DO CARROSSEL (Adicione no styles.css) --- */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde o que sai da tela */
+}
+
+.carousel-container {
+    display: flex; /* Itens um ao lado do outro */
+    gap: 20px;
+    overflow-x: auto; /* Permite rolagem */
+    scroll-behavior: auto; /* Importante para o JS funcionar bem */
+    padding: 20px 0;
+    
+    /* Esconde a barra de rolagem nativa para ficar bonito */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+}
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.carousel-item {
+    /* OBRIGATÓRIO: min-width impede que os itens encolham */
+    min-width: 220px; 
+    flex-shrink: 0; /* Garante que o item não diminua para caber na tela */
+    
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Estilo dos ícones */
+.carousel-item .icon-box {
+    width: 100%;
+    height: 120px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.carousel-item .icon-box i {
+    font-size: 3rem;
+    color: #d32f2f;
+}
+.carousel-container:active {
+    cursor: grabbing;
+}
+
+/* Estilo de cada cartão */
+.carousel-item {
+    min-width: 200px; /* OBRIGATÓRIO: Garante que o item tenha tamanho para rolar */
+    flex: 0 0 auto;   /* Impede que o item encolha */
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-10px);
+}
+
+/* A caixa cinza onde fica o ícone */
+.carousel-item .icon-box {
+    width: 100%;
+    height: 120px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.carousel-item .icon-box i {
+    font-size: 3.5rem;
+    color: #d32f2f; /* Vermelho Natal */
+}
+
+/* Botões laterais */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #d32f2f;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.carousel-btn:hover {
+    background: #b71c1c;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#prev-btn { left: 0; }
+#next-btn { right: 0; }
 
 /* Pets Section (Reutilizada para Ações) */
 .pets {
