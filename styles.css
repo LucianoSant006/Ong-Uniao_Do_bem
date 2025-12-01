@@ -277,6 +277,45 @@ nav.sticky {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE/Edge */
 }
+// INTERAÇÃO DO MODO AUTOMÁTICO
+document.addEventListener("DOMContentLoaded", () => {
+    const switchEl = document.getElementById("automaticModeSwitch");
+    const sectionEl = document.getElementById("mindfulness");
+    const messageEl = document.getElementById("mindfulness-message");
+    const statusText = document.getElementById("switch-status-text");
+
+    if(switchEl) {
+        let isOff = false; // Começa ligado (Modo Automático ON)
+
+        switchEl.addEventListener("click", () => {
+            isOff = !isOff; // Inverte o estado
+
+            if (isOff) {
+                // ESTADO: MODO AUTOMÁTICO DESLIGADO (Calma)
+                switchEl.classList.add("switched-off");
+                sectionEl.classList.add("calm-mode");
+                
+                statusText.innerText = "MODO AUTOMÁTICO: DESLIGADO";
+                statusText.style.color = "#4A7C59"; // Verde
+                
+                // Mostra a mensagem com um pequeno delay
+                setTimeout(() => {
+                    messageEl.classList.add("visible");
+                }, 300);
+
+            } else {
+                // ESTADO: MODO AUTOMÁTICO LIGADO (Padrão)
+                switchEl.classList.remove("switched-off");
+                sectionEl.classList.remove("calm-mode");
+                
+                statusText.innerText = "MODO AUTOMÁTICO: LIGADO";
+                statusText.style.color = "#2C3E50"; // Preto/Azul
+                
+                messageEl.classList.remove("visible");
+            }
+        });
+    }
+});
 .carousel-container::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
 }
